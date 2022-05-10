@@ -39,6 +39,7 @@
   
 
   cw2.addEventListener("click", function () {
+     answer.innerHTML="Loading...";
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
       .then(array => {
@@ -47,7 +48,7 @@
           `
        <div>
       <ul>
-       <li>User: ${post.userId}</br> ID:${post.id}</br> title:${post.title}</br> body:${post.body}</br><li/>
+      <li> User: ${post.userId}</br> ID:${post.id}</br> title:${post.title}</br> body:${post.body}</br>
 </ul>
 </div>
 `
